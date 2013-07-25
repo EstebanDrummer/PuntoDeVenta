@@ -4,6 +4,7 @@
  */
 package controller;
 
+import Model.Model;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.SimpleFormController;
 import Service.HolaService;
@@ -38,9 +39,9 @@ public class HolaController extends SimpleFormController {
     //para nuestro propio modelandView
      @Override
      protected ModelAndView onSubmit(Object command) throws Exception {
-     Nombre nombre= (Nombre) command;
-     ModelAndView mv = new ModelAndView(getSuccessView());
-     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor()));
+         Model m = new Model();
+       ModelAndView mv;
+       mv = m.Submit(command,this.holaService,getSuccessView());
      return mv;
      }
 }
