@@ -22,5 +22,6 @@
                 <input type="submit" value="OK">
             </form>
         </spring:nestedPath>
+        <a href="index.htm">Inicio</a>
     </body>
 </html>

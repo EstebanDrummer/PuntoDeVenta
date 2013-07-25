@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>${holaMensaje}</h1>
+        <a href="index.htm">Inicio</a>
     </body>
 </html>
