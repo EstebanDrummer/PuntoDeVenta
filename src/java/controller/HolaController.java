@@ -16,14 +16,16 @@ import Service.HolaService;
 public class HolaController extends SimpleFormController {
     
     HolaService holaService;
+    
     public void setHolaService(HolaService holaService){
         this.holaService= holaService;
     }
+    
     public HolaController() {
         //Initialize controller properties here or 
         //in the Web Application Context
 
-        setCommandClass(Nombre.class);
+        setCommandClass(Cliente.class);
         setCommandName("nombre");//nombre del comando que va en el modelo
         setSuccessView("holaView");//se lanza si es exitosa, despues del envio correcto
         setFormView("nombreView");//vista para mostrar formulario que lanza 
