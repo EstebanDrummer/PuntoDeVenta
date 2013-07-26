@@ -18,7 +18,9 @@ public class Model{
              String s) {
      Nombre nombre= (Nombre) command;
      ModelAndView mv = new ModelAndView(s);
-     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor()));
+     //String nombre, String cOrigen, String cDestino, String fIda, String fRegreso, String cantidad){
+
+     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor(),nombre.getcOrigen(),nombre.getcDestino(),nombre.getfIda(),nombre.getfRegreso(),nombre.getCantidad()));
      return mv;
      }
 }
