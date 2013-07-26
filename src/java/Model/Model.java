@@ -20,7 +20,7 @@ public class Model{
      ModelAndView mv = new ModelAndView(s);
      //String nombre, String cOrigen, String cDestino, String fIda, String fRegreso, String cantidad){
 
-     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor(),nombre.getcOrigen(),nombre.getcDestino(),nombre.getfIda(),nombre.getfRegreso(),nombre.getCantidad()));
+     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor(),nombre.getcOrigen(),nombre.getcDestino(),nombre.getfIda(),nombre.getCantidad()));
      return mv;
      }
 }

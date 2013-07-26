@@ -29,9 +29,9 @@
                     <option <c:if test = "${status.value == 'Med'}"></c:if>Medellin</option>
                 </select> 
                 </spring:bind>
-                <!-- Calendar ida -->
+                <!-- Calendar -->
                 <spring:bind path="fIda">
-                Fecha ida: <input type="date" name="${status.expression}" value="${status.value}">
+                Fecha Vuelo: <input type="date" name="${status.expression}" value="${status.value}">
                 </spring:bind>
                 <br>
                 Ciudad Destino:<br>
@@ -43,9 +43,6 @@
                 </select> 
                 </spring:bind>
                 <!-- Calendar regreso -->
-                <spring:bind path="fRegreso">
-                Fecha de regreso: <input type="date" name="${status.expression}" value="${status.value}"> <br>
-                </spring:bind>
                 Cantidad de viajeros:
                 <spring:bind path="cantidad">
                 <select name="${status.expression}">
