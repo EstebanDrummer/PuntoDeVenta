@@ -40,7 +40,8 @@ public class HolaController extends SimpleFormController {
      protected ModelAndView onSubmit(Object command) throws Exception {
      Nombre nombre= (Nombre) command;
      ModelAndView mv = new ModelAndView(getSuccessView());
-     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor()));
+     mv.addObject("holaMensaje", holaService.diHola(nombre.getValor(), nombre.getcOrigen(), nombre.getcDestino(), nombre.getfIda(), nombre.getfRegreso(), nombre.getCantidad()));
+     
      return mv;
      }
 }
