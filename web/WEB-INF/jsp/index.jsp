@@ -9,6 +9,6 @@
     </head>
 
     <body>
-        <a href="hola.htm"> Compra </a>
+        <a href="hola.htm"> Crear una Compra </a>
     </body>
 </html>

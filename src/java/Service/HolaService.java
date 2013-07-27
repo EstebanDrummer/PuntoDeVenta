@@ -16,7 +16,7 @@ import org.hibernate.Session;
 public class HolaService {
     Session session = null;
     public HolaService() {
-        this.session = NewHibernateUtil.getSessionFactory().getCurrentSession();
+        //this.session = NewHibernateUtil.getSessionFactory().getCurrentSession();
     }
     //toma nombre como parametro y devuelve un String
     public String diHola(String nombre, String cOrigen, String cDestino, String fIda, String cantidad){
@@ -27,10 +27,11 @@ public class HolaService {
     }*/
     
     public String borrar(Cliente nombre)
-    {
+    {   System.out.println("antes de comenzar la transaccion");
             try{
             // se obtiene la sesion
             Session s = NewHibernateUtil.getSessionFactory().getCurrentSession();
+            System.out.println("antes de comenzar la transaccion");
             s.beginTransaction();
             s.delete(nombre);
             s.getTransaction().commit();  
