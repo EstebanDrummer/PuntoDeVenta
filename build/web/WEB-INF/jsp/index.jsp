@@ -9,6 +9,9 @@
     </head>
 
     <body>
-        <a href="hola.htm"> Compra </a>
+        
+        <a href="clientecreate.htm">Ingresar Nuevo Cliente</a> <br>
+        <a href="clienteread.htm">Lista de Clientes</a> <br>
+        <a href="hola.htm"> Crear una Compra </a>
     </body>
 </html>

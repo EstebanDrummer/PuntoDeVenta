@@ -16,9 +16,11 @@ import Service.HolaService;
 public class HolaController extends SimpleFormController {
     
     HolaService holaService;
+    
     public void setHolaService(HolaService holaService){
         this.holaService= holaService;
     }
+    
     public HolaController() {
         //Initialize controller properties here or 
         //in the Web Application Context

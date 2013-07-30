@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-jul-2013 17:12:57 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="controller.Tiquete" table="TIQUETE" schema="ROOT">
+        <id name="TId" type="string">
+            <column name="T_ID" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="TCorigen" type="string">
+            <column name="T_CORIGEN" length="25" />
+        </property>
+        <property name="TCdestino" type="string">
+            <column name="T_CDESTINO" length="25" />
+        </property>
+        <property name="TFecha" type="string">
+            <column name="T_FECHA" length="25" />
+        </property>
+        <property name="TCsillas" type="java.lang.Integer">
+            <column name="T_CSILLAS" />
+        </property>
+        <property name="TValor" type="java.lang.Integer">
+            <column name="T_VALOR" />
+        </property>
+        <property name="CId" type="string">
+            <column name="C_ID" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
