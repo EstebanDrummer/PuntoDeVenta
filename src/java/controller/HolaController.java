@@ -25,7 +25,7 @@ public class HolaController extends SimpleFormController {
         //Initialize controller properties here or 
         //in the Web Application Context
 
-        setCommandClass(Cliente.class);
+        setCommandClass(Nombre.class);
         setCommandName("nombre");//nombre del comando que va en el modelo
         setSuccessView("holaView");//se lanza si es exitosa, despues del envio correcto
         setFormView("nombreView");//vista para mostrar formulario que lanza 

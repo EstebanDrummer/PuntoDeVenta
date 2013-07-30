@@ -4,6 +4,7 @@
  */
 package Model;
 
+import Service.ClienteService;
 import Service.HolaService;
 //import controller.Nombre;
 import controller.Cliente;
@@ -23,6 +24,20 @@ public class Model{
      //String nombre, String cOrigen, String cDestino, String fIda, String fRegreso, String cantidad){
     // mv.addObject("holaMensaje", holaService.diHola(nombre.getValor(),nombre.getcOrigen(),nombre.getcDestino(),nombre.getfIda(),nombre.getCantidad()));
      mv.addObject("holaMensaje", holaService.borrar(nombre));
+     return mv;
+     }
+     public ModelAndView Submit(Object command, ClienteService clienteService,
+             String c) {
+    // Nombre nombre= (Nombre) command;
+         System.out.println("esta es la c"+c);
+     Cliente cliente = (Cliente) command;
+     ModelAndView mv = new ModelAndView(c);
+     //String nombre, String cOrigen, String cDestino, String fIda, String fRegreso, String cantidad){
+    // mv.addObject("holaMensaje", holaService.diHola(nombre.getValor(),nombre.getcOrigen(),nombre.getcDestino(),nombre.getfIda(),nombre.getCantidad()));
+     if(c.equals("cliente2View")){
+     mv.addObject("clienteMensaje", clienteService.crear(cliente));}
+     if(c.equals("clienteRead2View")){
+     mv.addObject("clienteMensaje",clienteService.getEmpresa());}
      return mv;
      }
 }
