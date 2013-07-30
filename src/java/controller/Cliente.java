@@ -47,10 +47,6 @@ public class Cliente  implements java.io.Serializable {
     public void setCTipo(String CTipo) {
         this.CTipo = CTipo;
     }
-
-
-
-
 }
 
 

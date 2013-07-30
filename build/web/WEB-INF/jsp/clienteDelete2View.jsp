@@ -1,4 +1,9 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- 
+    Document   : clienteDelete2View
+    Created on : 30-jul-2013, 14:29:06
+    Author     : yepesk8r
+--%>
+
 <%@taglib uri= "http://www.springframework.org/tags" prefix="spring" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,11 +12,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
-        
-        <c:forEach items="${clienteMensaje}" var="cliente">
-           ID cliente ${cliente.CId} ${cliente.CNombre} ${cliente.CTipo} <br>
-        </c:forEach>
+    <body>        
+        <h1>${clienteMensaje}"</h1>
         <a href="index.htm">Inicio</a>
     </body>
 </html>

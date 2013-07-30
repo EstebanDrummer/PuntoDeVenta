@@ -20,7 +20,7 @@ public class ClienteService {
     }
     
     public String crear(Cliente cliente){
-        System.out.println("antes de comenzar la transaccion");
+        System.out.println("antes de comenzar la transaccion"+cliente.getCId()+cliente.getCNombre()+cliente.getCTipo());
             try{
             // se obtiene la sesion
             Session s = NewHibernateUtil.getSessionFactory().getCurrentSession();
@@ -36,7 +36,7 @@ public class ClienteService {
         }
     }
     
-    public List getEmpresa() {
+    public List getClientes() {
     List<Cliente> cliente = null;
     try{
         org.hibernate.Transaction tx = session.beginTransaction();
@@ -47,4 +47,35 @@ public class ClienteService {
     }    
           return cliente;      
     }
+    
+    public String actualizar_Cliente(Cliente cliente) {
+        try {
+            System.out.println(cliente.getCId() + cliente.getCNombre() + cliente.getCTipo());
+            // se obtiene la sesion
+            Session s = NewHibernateUtil.getSessionFactory().getCurrentSession();
+            s.beginTransaction();
+            s.update(cliente);
+            s.getTransaction().commit();
+            return "Cliente actualizado" + cliente.getCId() + " " + cliente.getCNombre() + " "
+                    + cliente.getCTipo();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "Error";
+    }
+         public String borrar_Cliente(Cliente cliente){
+        try{
+            // se obtiene la sesion
+            Session s = NewHibernateUtil.getSessionFactory().getCurrentSession();
+            s.beginTransaction();
+            s.delete(cliente);
+            s.getTransaction().commit();
+            return  "Cliente Borrado";
+            
+                   
+        } catch ( Exception e) {
+        e.printStackTrace();
+        }
+        return "Error";
+    }  
 }

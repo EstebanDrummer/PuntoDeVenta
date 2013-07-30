@@ -29,7 +29,7 @@ public class Model{
      public ModelAndView Submit(Object command, ClienteService clienteService,
              String c) {
     // Nombre nombre= (Nombre) command;
-         System.out.println("esta es la c"+c);
+         System.out.println("esta es la "+c);
      Cliente cliente = (Cliente) command;
      ModelAndView mv = new ModelAndView(c);
      //String nombre, String cOrigen, String cDestino, String fIda, String fRegreso, String cantidad){
@@ -37,7 +37,11 @@ public class Model{
      if(c.equals("cliente2View")){
      mv.addObject("clienteMensaje", clienteService.crear(cliente));}
      if(c.equals("clienteRead2View")){
-     mv.addObject("clienteMensaje",clienteService.getEmpresa());}
+     mv.addObject("clienteMensaje",clienteService.getClientes());}
+     if(c.equals("clienteUpdate2View")){
+     mv.addObject("clienteMensaje",clienteService.actualizar_Cliente(cliente));}
+     if(c.equals("clienteDelete2View")){
+     mv.addObject("clienteMensaje",clienteService.borrar_Cliente(cliente));}
      return mv;
      }
 }

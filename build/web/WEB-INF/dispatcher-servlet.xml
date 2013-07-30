@@ -13,6 +13,8 @@
     
     <bean class="controller.ClienteCreateController" p:clienteService-ref="clienteService"/>
     <bean class="controller.ClienteReadController" p:clienteService-ref="clienteService"/>
+    <bean class="controller.ClienteUpdateController" p:clienteService-ref="clienteService"/>
+    <bean class="controller.ClienteDeleteController" p:clienteService-ref="clienteService"/>
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must

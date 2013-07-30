@@ -1,8 +1,9 @@
 <%-- 
-    Document   : clienteRead1View
-    Created on : 29-jul-2013, 23:37:11
+    Document   : clienteDelete1View
+    Created on : 30-jul-2013, 14:27:37
     Author     : yepesk8r
 --%>
+
 <%@taglib uri= "http://www.springframework.org/tags" prefix="spring" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,12 +13,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <spring:nestedPath path="cliente">
+        <h1>Ingrese ID del cliente a borrar</h1>
+               <spring:nestedPath path="cliente">
             <form action="" method="post">
-                    <input type="submit" value="Lista">
+                CId:
+                <spring:bind path="CId">
+                    <input type="text" name="${status.expression}" value="${status.value}"> <br>
+                </spring:bind>
+                <input type="submit" value="CONSULTAR">
             </form>
-            
-        <a href="index.htm">Inicio</a>
         </spring:nestedPath>
     </body>
 </html>
