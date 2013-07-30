@@ -9,6 +9,7 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
 
      <bean name="holaService" class="Service.HolaService"/>
+     <bean name="clienteService" class="Service.ClienteService"/>
     
     <!--bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
